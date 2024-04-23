@@ -60,7 +60,7 @@
                 echo "
                 
                 <div class='item'>
-                        <b>Não séries ainda!</b>
+                        <b>Não existe séries ainda!</b>
                 </div>";
 
             }

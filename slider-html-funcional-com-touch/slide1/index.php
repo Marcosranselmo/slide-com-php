@@ -34,38 +34,37 @@
         <div class="row">
             <div class="large-12 columns">
                 <div class="car-carousel car-theme">
-                <?php
-                 
-                 //listar os filmes
-                 
-                 $listaFilmes = mysqli_query($conexao, "SELECT * FROM itens WHERE categoria = 'Filmes' ");
+              <?php
+                  
+                  $listagemFilmes = mysqli_query($conexao, "SELECT * FROM itens WHERE categoria = 'Filmes' ");
 
-                 $listagemFilmes = mysqli_num_rows($listaFilmes);
-
-                 if($listagemFilmes > 0){
+                  $listagemRowFilmes = mysqli_num_rows($listagemFilmes);
                  
-                while($listagemArraysFilmes = mysqli_fetch_array($listaFilmes)){    
+                  if($listagemRowFilmes > 0){
+   
+                    while($filmesArrays = mysqli_fetch_array($listagemFilmes)){
+
+                    $idFilme = $filmesArrays['id'];
+                    $tituloFilme = $filmesArrays['titulo'];
+                    $imageFilme = $filmesArrays['caminho'];    
+
+                  echo "
                 
-                $idFilme = $listagemArraysFilmes['id'];    
-                $titulo = $listagemArraysFilmes['titulo'];
-                $arquivoImage = $listagemArraysFilmes['caminho'];
+                <div class='item'>
+                       <a href='../../assist-filmes.php?id=$idFilme' target='_top'>
+                        <img src='../../$imageFilme' style='position:absolute; width: 100%; height:100%;'></a>
+                </div>";
+                    }
+            }else{
 
                 echo "
+                
                 <div class='item'>
-                        
-                <a href='../../assistir.php?id=$idFilme' target='_top'><img src='../../$arquivoImage' style='position:absolute; width: 100%; height:100%;'></a>
-
+                        <b>Não existe Filmes ainda!</b>
                 </div>";
-                }
-                 }else{
-                    echo "
-                    <div class='item'>
-                            
-                   <b>Não existe filmes ainda!</b>
-    
-                    </div>";
-                 }
-                ?>   
+
+            }
+                   ?>
                 </div>
 
                 <script>
