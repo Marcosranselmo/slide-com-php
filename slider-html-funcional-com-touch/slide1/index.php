@@ -34,13 +34,13 @@
         <div class="row">
             <div class="large-12 columns">
                 <div class="car-carousel car-theme">
-              <?php
+                <?php
                   
-                  $listagemFilmes = mysqli_query($conexao, "SELECT * FROM itens WHERE categoria = 'Filmes' ");
+                    $listagemFilmes = mysqli_query($conexao, "SELECT * FROM itens WHERE categoria = 'Filmes' ");
 
-                  $listagemRowFilmes = mysqli_num_rows($listagemFilmes);
-                 
-                  if($listagemRowFilmes > 0){
+                    $listagemRowFilmes = mysqli_num_rows($listagemFilmes);
+                    
+                    if($listagemRowFilmes > 0){
    
                     while($filmesArrays = mysqli_fetch_array($listagemFilmes)){
 
@@ -48,23 +48,23 @@
                     $tituloFilme = $filmesArrays['titulo'];
                     $imageFilme = $filmesArrays['caminho'];    
 
-                  echo "
+                    echo "
                 
-                <div class='item'>
-                       <a href='../../assist-filmes.php?id=$idFilme' target='_top'>
+                    <div class='item'>
+                        <a href='../../assist-filmes.php?id=$idFilme' target='_top'>
                         <img src='../../$imageFilme' style='position:absolute; width: 100%; height:100%;'></a>
-                </div>";
-                    }
-            }else{
+                    </div>";
+                }
+                }else{
 
                 echo "
                 
                 <div class='item'>
-                        <b>Não existe Filmes ainda!</b>
+                    <b>Não existe Filmes ainda!</b>
                 </div>";
 
-            }
-                   ?>
+                }
+                ?>
                 </div>
 
                 <script>
@@ -95,7 +95,6 @@
             </div>
         </div>
     </section>
-
 
 </body>
 
