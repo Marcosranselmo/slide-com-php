@@ -52,7 +52,7 @@
                 
                 <div class='item'>
                        <a href='../../assist-series.php?id=$idSerie' target='_top'>
-                        <img src='../../$imageSerie' style='position:absolute; width: 100%; height:100%;'></a>
+                        <img src='././$imageSerie' style='position:absolute; width: 100%; height:100%;'></a>
                 </div>";
                     }
             }else{

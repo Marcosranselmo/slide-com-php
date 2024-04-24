@@ -53,7 +53,8 @@
     min-height: 200px;
     height: 250px;
     float: left;
-    background: red;
+    /* background-image: url("../../images/sem-foto.jpg"); */
+    background: rgb(207, 207, 207);
     width: 150px;
     min-width: 100px;
     -webkit-backface-visibility: hidden;

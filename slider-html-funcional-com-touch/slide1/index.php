@@ -52,7 +52,8 @@
                 
                     <div class='item'>
                         <a href='../../assist-filmes.php?id=$idFilme' target='_top'>
-                        <img src='../../$imageFilme' style='position:absolute; width: 100%; height:100%;'></a>
+                        $tituloFilme;
+                        <img src='././$imageFilme' style='position:absolute; width: 100%; height:100%;'></a>
                     </div>";
                 }
                 }else{
