@@ -106,8 +106,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: gainsboro;
-    color: gray;
+    background: rgb(27, 27, 27);
+    color: rgb(199, 199, 199);
     width: 50px;
     min-height: 100px;
     height: 150%;
@@ -119,8 +119,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: gainsboro;
-    color: gray;
+    background: rgb(27, 27, 27);
+    color: rgb(199, 199, 199);
     width: 50px;
     min-height: 100px;
     height: 150%;
